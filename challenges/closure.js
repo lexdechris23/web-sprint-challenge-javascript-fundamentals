@@ -1,7 +1,7 @@
 // ==== Closures ==== 
 
 /* Task 1: Study the code below and explain in your own words why nested function can access the variable internal. */
-
+// 'nestedFunction' can access the vairable 'internal' because they are both in the local scope of 'myFunction'
 
 const external = "I'm outside the function";
 
@@ -22,3 +22,13 @@ myFunction();
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+
+function summation(number){
+  let counter = 0;
+  for (let i = 1; i <= number; i++) {
+     counter += i;
+  }
+  return counter;
+ }
+ console.log(summation(6));
